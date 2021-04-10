@@ -14,20 +14,26 @@ const NavBar = (props) => {
   return (
     <div
       className={
-        "relative flex bg-gray-100 flex-wrap mb-3 px-4 items-center " +
+        "relative flex bg-gray-100 flex-wrap items-center shadow-sm " +
         props.layoutProps
       }
     >
       <div className="px-4 pr-8">Help Me Learn</div>
       <div className="flex-1"></div>
       <a onClick={() => handleClick("")}>
-        <div className="cursor-pointer py-4 px-10 bg-gray-200 hover:bg-blue-400">Home</div>
+        <div className="cursor-pointer py-4 px-10 bg-gray-200 hover:bg-indigo-700 hover:text-white transition duration-300 hover:shadow-2xl ">
+          Home
+        </div>
       </a>
       <a onClick={() => handleClick("login")}>
-        <div className="cursor-pointer py-4 px-10 bg-gray-200 hover:bg-blue-400">Login</div>
+        <div className="cursor-pointer py-4 px-10 bg-gray-200 hover:bg-indigo-700 hover:text-white transition duration-300 hover:shadow-2xl">
+          Login
+        </div>
       </a>
       <a onClick={() => handleClick("signup")}>
-        <div className="cursor-pointer py-4 px-10 bg-gray-200 hover:bg-blue-400">Signup</div>
+        <div className="cursor-pointer py-4 px-10 bg-gray-200 hover:bg-indigo-700 hover:text-white transition duration-300 hover:shadow-2xl">
+          Signup
+        </div>
       </a>
     </div>
   );

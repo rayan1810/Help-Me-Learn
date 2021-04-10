@@ -8,26 +8,34 @@ const Input = (props) => {
   console.log(inputClass);
 
   return (
-    <div
-      className={
-        "relative flex  flex-wrap items-stretch mb-3 mx-4 " + props.layoutProps
-      }
-    >
-      {props.leftIcon ? (
-        <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
-          {props.leftIcon}
-        </span>
-      ) : (
-        <></>
-      )}
-      <input type="text" placeholder="Placeholder" className={inputClass} />
-      {props.rightIcon ? (
-        <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
-          {props.rightIcon}
-        </span>
-      ) : (
-        <></>
-      )}
+    <div>
+      <div className={"mx-4 mt-4 " + props._label}>{props.label}</div>
+      <div
+        className={
+          "relative flex  flex-wrap items-stretch mb-3 mx-4 " +
+          props.layoutProps
+        }
+      >
+        {props.leftIcon ? (
+          <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3">
+            {props.leftIcon}
+          </span>
+        ) : (
+          <></>
+        )}
+        <input
+          type={props.type ? props.type : "text"}
+          placeholder={props.placeholder ?? "Placeholder"}
+          className={inputClass}
+        />
+        {props.rightIcon ? (
+          <span className="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 right-0 pr-3 py-3">
+            {props.rightIcon}
+          </span>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 };
